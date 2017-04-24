@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Nodejs Large Leaderboard Spec" errors="0" tests="2" failures="2" time="0.002" timestamp="2017-03-19T11:06:36">
+  <testcase classname="Nodejs Large Leaderboard Spec" name="testcase1 leaderboard large test" time="0"><failure type="expect" message="Error: ENOENT: no such file or directory, open &amp;apos;C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\data\testcase1\leaderboardlarge.csv&amp;apos;">Error: ENOENT: no such file or directory, open &amp;apos;C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\data\testcase1\leaderboardlarge.csv&amp;apos;
+    at Error (native)
+    at Object.fs.openSync (fs.js:640:18)
+    at Object.fs.readFileSync (fs.js:508:33)
+    at C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\spec\tests\LeaderBoardSpec.js:50:34
+    at Object.exports.generateLeaderBoardLarge (C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\Leaderboard.js:33:5)
+    at .&amp;lt;anonymous&amp;gt; (C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\spec\tests\LeaderBoardSpec.js:48:21)
+    at .&amp;lt;anonymous&amp;gt; (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node\async-callback.js:45:37)
+    at jasmine.Block.execute (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:1145:17)
+    at jasmine.Queue.next_ (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:2177:31)
+    at jasmine.Queue.start (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:2130:8)</failure></testcase>
+  <testcase classname="Nodejs Large Leaderboard Spec" name="testcase2 leaderboard large test" time="0.002"><failure type="expect" message="Error: ENOENT: no such file or directory, open &amp;apos;C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\data\testcase2\leaderboardlarge.csv&amp;apos;">Error: ENOENT: no such file or directory, open &amp;apos;C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\data\testcase2\leaderboardlarge.csv&amp;apos;
+    at Error (native)
+    at Object.fs.openSync (fs.js:640:18)
+    at Object.fs.readFileSync (fs.js:508:33)
+    at C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\spec\tests\LeaderBoardSpec.js:61:34
+    at Object.exports.generateLeaderBoardLarge (C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\src\Leaderboard.js:33:5)
+    at .&amp;lt;anonymous&amp;gt; (C:\Users\PVSM Praveen\MissionRnDProjects\FinalTest\spec\tests\LeaderBoardSpec.js:59:21)
+    at .&amp;lt;anonymous&amp;gt; (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node\async-callback.js:45:37)
+    at jasmine.Block.execute (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:1145:17)
+    at jasmine.Queue.next_ (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:2177:31)
+    at jasmine.Queue.start (C:\Users\PVSM Praveen\AppData\Roaming\npm\node_modules\jasmine-node\lib\jasmine-node/jasmine-1.3.1.js:2130:8)</failure></testcase>
+</testsuite>
+</testsuites>

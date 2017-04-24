@@ -1,0 +1,10 @@
+CREATE TABLE STUDENTS
+(
+id          integer NOT NULL auto_increment,
+firstName  char(25) NOT NULL,
+lastName char(25) NOT NULL,
+gender     char(2) NOT NULL,
+totalMarks integer NOT NULL,
+PRIMARY KEY (id),
+check(gender in('M','F'))
+);

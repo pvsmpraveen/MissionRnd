@@ -1,0 +1,24 @@
+CREATE TABLE Tickets
+(
+id        integer NOT NULL auto_increment,
+firstName  char(25) NOT NULL,
+lastName char(25) NOT NULL,
+gender     char(2) NOT NULL,
+totalMarks integer NOT NULL,
+PRIMARY KEY (id),
+check(gender in('M','F'))
+);
+
+create table Tickets (
+   pnr int(6) zerofill NOT NULL auto_increment, 
+   src char(50) NOT NULL,
+   dest char(50) NOT NULL,
+   name char(50) NOT NULL,
+   facilities char(200),
+   doj char(50) NOT NULL,
+   status int()
+   primary key(pnr)
+);
+
+		conn.query("create table Tickets (pnr int(6) zerofill NOT NULL auto_increment,\src char(50) NOT NULL,dest char(50) NOT NULL,name char(50) NOT NULL,facilities char(200),doj char(50) NOT NULL,status boolean,primary key(pnr)",function(err, result){
+create table Tickets (pnr int(6) zerofill NOT NULL auto_increment,\src char(50) NOT NULL,dest char(50) NOT NULL,name char(50) NOT NULL,facilities char(200),doj char(50) NOT NULL,status boolean,primary key(pnr)

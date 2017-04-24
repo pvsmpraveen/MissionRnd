@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Student CRUD" errors="0" tests="25" failures="0" time="0.998" timestamp="2017-03-05T11:53:15">
+  <testcase classname="Student CRUD" name="should get 404" time="0.07"></testcase>
+  <testcase classname="Student CRUD" name="should get empty set of students " time="0.042"></testcase>
+  <testcase classname="Student CRUD" name="should create student" time="0.083"></testcase>
+  <testcase classname="Student CRUD" name="should create duplicate student" time="0.011"></testcase>
+  <testcase classname="Student CRUD" name="should create student 2" time="0.051"></testcase>
+  <testcase classname="Student CRUD" name="should create student 3" time="0.131"></testcase>
+  <testcase classname="Student CRUD" name="should get all the set of students " time="0.01"></testcase>
+  <testcase classname="Student CRUD" name="should get all the set of male students " time="0.036"></testcase>
+  <testcase classname="Student CRUD" name="should get all the set of students with invalid filters" time="0.012"></testcase>
+  <testcase classname="Student CRUD" name="should retrieve student 1" time="0.019"></testcase>
+  <testcase classname="Student CRUD" name="should update student 1" time="0.1"></testcase>
+  <testcase classname="Student CRUD" name="should update student 1 with invalid totalMarks" time="0.011"></testcase>
+  <testcase classname="Student CRUD" name="should ignore null values in update operation of student 1" time="0.012"></testcase>
+  <testcase classname="Student CRUD" name="should retrieve updated student with id 1" time="0.012"></testcase>
+  <testcase classname="Student CRUD" name="should not modify id in update operation " time="0.054"></testcase>
+  <testcase classname="Student CRUD" name="should retrieve updated student with id 1 again" time="0.011"></testcase>
+  <testcase classname="Student CRUD" name="should delete the student id 1" time="0.05"></testcase>
+  <testcase classname="Student CRUD" name="should delete the student id 2" time="0.099"></testcase>
+  <testcase classname="Student CRUD" name="should delete the student id 3" time="0.096"></testcase>
+  <testcase classname="Student CRUD" name="should update student 1 after deletion" time="0.011"></testcase>
+  <testcase classname="Student CRUD" name="should throw 404 for update operation without passing id" time="0.022"></testcase>
+  <testcase classname="Student CRUD" name="should throw 404 for delete operation without passing id" time="0.02"></testcase>
+  <testcase classname="Student CRUD" name="should throw 404 if specified record is not found" time="0.01"></testcase>
+  <testcase classname="Student CRUD" name="should create student with invalid totalMarks " time="0.01"></testcase>
+  <testcase classname="Student CRUD" name="should create student with invalid gender " time="0.011"></testcase>
+</testsuite>
+</testsuites>

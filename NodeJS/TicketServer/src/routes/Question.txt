@@ -1,0 +1,150 @@
+In this project, write code for the given REST contract
+
+Bus ticketing service.
+
+The idea is to develop a service which can be used to handle booking of tickets for buses.
+
+Pre-requisite ** Important **
+
+No need to write functions for Get and EndConnections in models/databaseHelpers.js
+Update your Db Config manually in the file models/databaseHelpers.js Line number 8.
+The DB Config variable will be used by the GetConnection method which we have already written.
+Make sure that you make use of the same GetConnection and EndConnection method when you perform Db operations
+Write code to create the required tables in the method setupTicketsTable in models/tickets.js
+Also, setupTicketsTable method should ensure that the table tickets has zero rows. i.e., it should delete the existing data.
+Implement the following rest endpoints
+
+POST /tickets API is used to book a ticket for a given route. 
+Request body : 
+            {
+                "src" : <valid_city>,
+                "dest" : <valid_city>,
+                "name" : <valid_name>,
+                "doj" : <valid_date>,
+                "facilities" : {
+                    "key1" : "value1",
+                    "key2" : "value2",
+                }
+            }
+        
+Constraints explained..
+source and destination should be from valid cities only. Hyderabad, Bangalore, Delhi, Kolkata, Chennai, Ahmedabad, Pune and Mumbai
+Name should be valid. No numeric or special characters. Space and dot can be allowed.
+Date should be greater than current date and less than four months from current date. i.e., If today's date is 12th March, User can book a ticket only till 11th July.
+Facilities is a key value pairs. You can add any facility you want. No need of validations here.
+
+Response: Return a pnr string. It has to be of length 6. Not more or less than six. This PNR will be used to READ, Update or Delete the ticket. 
+Http status codes.
+201 (Created) If booking is successful
+400 (Bad request) If invalid / incomplete data is given
+
+
+GET /tickets/:pnr Return the all the details of the given PNR number. 
+Http status codes.
+200 (Ok) If ticket is available with given PNR.
+404 (Not Found) If ticket with PNR is not available
+
+
+PUT /tickets/:pnr Only facilities for a ticket can be updated using this api. No other field can be updated using update api. Request body : 
+            {
+                "facilities" : {
+                    "key1" : "value1",
+                    "key2" : "value2"
+                }
+            }
+        
+The facilities for the ticket with given PNR should be Updated with the given facilities. Do not replace the whole set of facilities. 
+For example - If facilities before update are
+            {
+                "key1" : "oldvalue"
+            }
+        
+Facilities post update should be
+            {
+                "key1" : "value1",
+                "key2" : "value2"
+            }
+        
+Note how key1 facility got updated from oldvalue to value1 and key2 facility got updated. 
+Http status codes..
+204 (No Content) If ticket is available with given PNR and update operation is successful
+404 (Not Found) If ticket with PNR is not available
+400 (Bad request) If invalid data is given for update operation
+
+DELETE /tickets/:pnr API is used to cancel the ticket. Cancellation doesn't mean that the ticket details has to be deleted. 
+Http Status codes..
+204 (No Content) If ticket is available with given PNR and delete operation is successful
+404 (Not Found) If ticket with PNR is not available or if the Ticket is already cancelled.
+
+
+GET /tickets - Returns the list of pnrs of all the tickets. Sample response : 
+["pnr1", "pnr2", "pnr3"]
+
+If query params contains the key fulldata=true, return details of all the tickets. Sample response:
+                    [
+                        {
+                            "pnr" : "pnr1",
+                            "src" : "src1",
+                            "dest" : "dest1",
+                            "name" : "name1",
+                            "facilities" : {},
+                            "doj" : "date of journey"
+                            }, {
+                            "pnr" : "pnr2",
+                            "src" : "src1",
+                            "dest" : "dest1",
+                            "name" : "name1",
+                            "facilities" : {},
+                            "doj" : "date of journey"
+                        }
+                    ]
+                
+Applying query params to the request. 
+Sample request : GET /tickets/?name="nikhil"&fulldata=true 
+Response would be
+            [
+                {
+                    "pnr" : "pnr1",
+                    "src" : "hyderabad",
+                    "dest" : "delhi",
+                    "name" : "nikhil reddy",
+                    "facilities" : {},
+                    "doj" : "date of journey"
+                    }, {
+                    "pnr" : "pnr2",
+                    "src" : "hyderabad",
+                    "dest" : "pune",
+                    "name" : "nikhil kumar",
+                    "facilities" : {},
+                    "doj" : "date of journey"
+                }
+            ]
+        
+Please note that the name should be filtered with like clause. Not the exact match. 
+
+Similarly for request : GET /tickets/?name="nikhil", Response would be 
+            ["pnr1", "pnr2"];
+        
+Mind that if fulldata != true, only return the list of PNRs 
+
+Http Status codes..
+200 (Ok) If operation is successful
+400 (Bad request) If invalid query filters are passed for the request.
+GET /tickets/cancelled API is used to list the PNRs of all the cancelled tickets. Applying query params to the request. 
+Sample request : GET /tickets/cancelled?name="nikhil" 
+Response would be
+            ["pnr1", "pnr2"] // List of PNRs of cancelled tickets with name containing nikhil.
+        
+
+Http Status codes..
+200 (Ok) If operation is successful
+400 (Bad request) If invalid query filters are passed for the request.
+Important instructions ...
+
+For the two GET operations /tickets and /tickets/cancelled, output data can be filtered with various query params like src, dest, name, doj and pnr. Facilities will not be used as a query param here.
+Ensure that all the validations, duplicates, invalid data, corner cases are handled.
+Ensure that for get operations, Only return pnr, src, dest, name, facilities and doj. No other field should be sent.
+The length of PNR should be six!
+Other than facilities, no other property can be null during ticket creation.
+City names can be case-insensitive. hyderabad and HYDERabad are valid city names
+DO NOT USE any library than the ones which are recommended. We are not keeping track of libraries that you are using. So, in case of any such usage, your tests will not be executed on the server machines.

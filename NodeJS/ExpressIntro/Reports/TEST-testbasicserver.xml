@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="test basic server" errors="0" tests="7" failures="0" time="0.171" timestamp="2017-03-05T11:53:45">
+  <testcase classname="test basic server" name="should get 404" time="0.078"></testcase>
+  <testcase classname="test basic server" name="should return proper error body" time="0"></testcase>
+  <testcase classname="test basic server" name="should give sample get string" time="0.031"></testcase>
+  <testcase classname="test basic server" name="post base url:should echo the body sent" time="0.015"></testcase>
+  <testcase classname="test basic server" name="should give sample get string for users homepage" time="0.016"></testcase>
+  <testcase classname="test basic server" name="should return expected list of all users" time="0.016"></testcase>
+  <testcase classname="test basic server" name="should statically server image" time="0.015"></testcase>
+</testsuite>
+</testsuites>

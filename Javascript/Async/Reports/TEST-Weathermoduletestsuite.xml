@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Weather module test suite" errors="0" tests="2" failures="0" time="7.69" timestamp="2017-02-14T12:53:27">
+  <testcase classname="Weather module test suite" name="Should find temperature of a city by name" time="7.345"></testcase>
+  <testcase classname="Weather module test suite" name="Should return appropriate error for invalid city name" time="0.345"></testcase>
+</testsuite>
+</testsuites>

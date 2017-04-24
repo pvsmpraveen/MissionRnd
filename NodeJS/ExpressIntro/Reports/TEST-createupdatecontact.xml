@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="create update contact" errors="0" tests="6" failures="0" time="0.092" timestamp="2017-03-05T11:53:45">
+  <testcase classname="create update contact" name="should get 404" time="0.016"></testcase>
+  <testcase classname="create update contact" name="should get 404 here" time="0.016"></testcase>
+  <testcase classname="create update contact" name="should create contact" time="0.015"></testcase>
+  <testcase classname="create update contact" name="should retrieve contact" time="0.01"></testcase>
+  <testcase classname="create update contact" name="should update contact" time="0.01"></testcase>
+  <testcase classname="create update contact" name="should retrieve updated contact" time="0.024"></testcase>
+</testsuite>
+</testsuites>

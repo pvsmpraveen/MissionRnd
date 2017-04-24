@@ -1,0 +1,20 @@
+CREATE TABLE restaurents
+(
+	id integer NOT NULL auto_increment,
+	name  char(31) NOT NULL,
+	phone char(31) NOT NULL,
+	budget     integer NOT NULL,
+	cuisine char(31) NOT NULL,
+	colony char(31) NOT NULL,
+	city char(50) NOT NULL,
+	primary KEY (id)
+);
+
+{
+	“name”:”Paradise”,
+	“phone”:”9520123239”,
+“budget:300,
+“cuisine”:”northindian”,
+“colony”:”kphb”,
+	“city”:”hyderabad”	
+}

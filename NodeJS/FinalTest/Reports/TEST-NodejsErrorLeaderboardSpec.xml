@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Nodejs Error Leaderboard Spec" errors="0" tests="1" failures="1" time="0" timestamp="2017-03-19T11:06:36">
+  <testcase classname="Nodejs Error Leaderboard Spec" name="error in users.csv" time="0"><failure type="expect" message="Error should be thrown">Error should be thrown</failure><failure type="expect" message="Error should be thrown">Error should be thrown</failure></testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,1 @@
+{"project_name":"Node_Sample","project_gitrepo":"https://github.com/mission-rnd/mrnd-nodejs-sample","project_page":"http://mission-rnd.github.io/nodejs-sampletest.htm","language":"javascript","project_validator":"jasmine-node --junitreport --captureExceptions spec/tests/","project_steps":["SampleServer"]}

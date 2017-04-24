@@ -1,0 +1,2 @@
+cmd: cd {PROJECT_PATH}\src && node {FILE_ACTIVE_NAME_BASE}.js
+sh: true,
